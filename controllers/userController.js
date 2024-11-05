@@ -4,7 +4,7 @@ const Joi = require("joi");
 const jwt = require("jsonwebtoken");
 const bcrypt = require("bcrypt");
 
-const helper = require("../helpers/validation");
+const helper = require("../middlewares/validation");
 const Models = require("../models/index");
 const secretKey = "secretKey";
 
@@ -115,6 +115,4 @@ module.exports = {
       res.status(500).json({ message: "Server error", error: error.message });
     }
   }
-
-
 }
